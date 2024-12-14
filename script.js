@@ -7,12 +7,15 @@ class ProductProperties {
     }
     //method to return total value of product
     getTotalValue(){
-        return ( this.name + " Total Value: $" + this.quantity*this.price);
+        return ( this.name + " Total Value: $" + (this.quantity*this.price).toFixed(2));
     }
 
     //method to state product attributes
     toString(){
-        return (`Product: ${this.name} | Price: $${this.price} | Quantity: ${this.quantity}`);
+        return (`Product: ${this.name} | Price: $${this.price.toFixed(2)} | Quantity: ${this.quantity}`);
+
+    //static method for applying discounts
+    applyDiscount()
     }
 }
 
@@ -27,7 +30,7 @@ class PerishableProductProperties extends ProductProperties {
 
     //method is overridden from parent class
     toString(){
-        return (`Product: ${this.name} | Price: $${this.price} | Quantity: ${this.quantity} | Expiration Date: ${this.expirationDate}`);
+        return (`Product: ${this.name} | Price: $${this.price.toFixed(2)} | Quantity: ${this.quantity} | Expiration Date: ${this.expirationDate}`);
     }
 }
 
