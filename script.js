@@ -137,7 +137,7 @@ ProductProperties.applyDiscount(happyBasket.inventory, 0.15);
 console.log("Happy Basket Total Inventory Value During Sale: $" + happyBasket.getInventoryValue());
 
 //* Looking Up a Product From Happy Basket Inventory
-let item1 = happyBasket.findProductByName("Lip Tint");
+const item1 = happyBasket.findProductByName("Lip Tint");
 console.log(`...Finding Item...`);
 console.log(`Found Item: ${item1}`);
 
