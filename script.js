@@ -29,10 +29,17 @@ class PerishableProductProperties extends ProductProperties {
 
     //method is overridden from parent class
     toString(){
-        return (`Product: ${this.name} | Price: $${this.price} | Quantity: ${this.quantity}`);
+        return (`Product: ${this.name} | Price: $${this.price} | Quantity: ${this.quantity} | Expiration Date: ${this.expirationDate}`);
     }
 }
 
 //* testing parent class
 const lipstick = new ProductProperties ("Lipstick in Shade 'Rose Tea' ", 7.99, 20);
 console.log(lipstick.toString());
+
+//* testing child class
+const milk = new PerishableProductProperties ("Milk", 1.50, 10, '2024-12-31');
+console.log(milk.toString());
+
+const mushroom = new PerishableProductProperties ("Cremini Mushrooms", 3.72, 37, '2024-12-28');
+console.log(mushroom.toString());
