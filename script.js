@@ -125,7 +125,10 @@ const strawberry = new PerishableProductProperties ("Basket of Strawberries", 7.
 const happyBasket = new Store();
 happyBasket.addProduct(lipTint);
 happyBasket.addProduct(brownieMix)
-happyBasket.addProduct(taco)
-happyBasket.addProduct()
-happyBasket.addProduct
+happyBasket.addProduct(taco);
+happyBasket.addProduct(cheese);
+happyBasket.addProduct(strawberry);
+
+console.log("Happy Basket Total Inventory Value Before Sale: $" + happyBasket.getInventoryValue());
+
 
