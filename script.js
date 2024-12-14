@@ -104,3 +104,6 @@ myMarket.addProduct(lipstick);
 myMarket.addProduct(milk);
 myMarket.addProduct(mushroom);
 console.log("myMarket Total Inventory Value: $" + myMarket.getInventoryValue());
+
+console.log(`Found Item: ${myMarket.findProductByName("Cremini Mushrooms")}`); //case where item is inside myMarket
+console.log(`Found Item: ${myMarket.findProductByName("Brownie Mix")}`); //case where item is NOT inside myMark
