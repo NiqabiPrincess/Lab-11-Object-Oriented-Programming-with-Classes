@@ -130,5 +130,6 @@ happyBasket.addProduct(cheese);
 happyBasket.addProduct(strawberry);
 
 console.log("Happy Basket Total Inventory Value Before Sale: $" + happyBasket.getInventoryValue());
-
+ProductProperties.applyDiscount(happyBasket.inventory, 0.15);
+console.log("Happy Basket Total Inventory Value During Sale: $" + happyBasket.getInventoryValue());
 
