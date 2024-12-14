@@ -7,7 +7,7 @@ class ProductProperties {
     }
     //method to return total value of product
     getTotalValue(){
-        return ( this.name + " Total Value: $" + (this.quantity*this.price).toFixed(2));
+        return (this.quantity*this.price);
     }
 
     //method to state product attributes
@@ -55,7 +55,7 @@ class Store {
         for (let i = 0; i <this.inventory.length; i++){
             totalValue += this.inventory[i].getTotalValue();
         }
-        return totalValue;
+        return totalValue.toFixed(2);
     }
 }
 
@@ -85,3 +85,12 @@ ProductProperties.applyDiscount([lipstick, milk, mushroom], 0.40);
 console.log(lipstick.toString());
 console.log(milk.toString());
 console.log(mushroom.toString());
+
+//* testing store class
+console.log("---------------------------------------------------");
+
+const myMarket = new Store();
+myMarket.addProduct(lipstick);
+myMarket.addProduct(milk);
+myMarket.addProduct(mushroom);
+console.log("myMarket Total Inventory Value: $" + myMarket.getInventoryValue());
