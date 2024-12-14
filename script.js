@@ -65,7 +65,7 @@ class Store {
                 return this.inventory[i];
             }
         }
-        return "Product Not Found in Store Inventory";
+        return null;
     }
 }
 
