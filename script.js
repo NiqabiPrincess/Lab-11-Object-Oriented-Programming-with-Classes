@@ -76,6 +76,7 @@ const lipstick = new ProductProperties ("Lipstick in Shade 'Rose Tea' ", 7.99, 2
 console.log(lipstick.toString());
 console.log(lipstick.getTotalValue());
 
+
 //* testing child class
 console.log("---------------------------------------------------");
 
@@ -87,6 +88,7 @@ const mushroom = new PerishableProductProperties ("Cremini Mushrooms", 3.72, 37,
 console.log(mushroom.toString());
 console.log(mushroom.getTotalValue());
 
+
 //* testing static method
 console.log("---------------------------------------------------");
 
@@ -95,6 +97,7 @@ ProductProperties.applyDiscount([lipstick, milk, mushroom], 0.40);
 console.log(lipstick.toString());
 console.log(milk.toString());
 console.log(mushroom.toString());
+
 
 //* testing store class
 console.log("---------------------------------------------------");
@@ -110,10 +113,19 @@ console.log(`Found Item: ${myMarket.findProductByName("Brownie Mix")}`); //case 
 
 //* Testing the System, Part 5
 console.log("---------------------------------------------------");
-console.log("....Testing System....")
+console.log("....Testing System....");
+
 const lipTint = new ProductProperties ("Lip Tint", 6.56, 30);
 const brownieMix = new ProductProperties ("Brownie Mix", 3.52, 25);
 const taco = new ProductProperties ("Taco Diner Kit", 8.76, 15);
 //perishable items
 const cheese = new PerishableProductProperties ("Cheese", 4.53, 27, "2025-01-05");
-const brusselsSprouts = new PerishableProductProperties ("Brussels Sprouts", 7.43, 12, "2025-01-02")
+const strawberry = new PerishableProductProperties ("Basket of Strawberries", 7.43, 22, "2025-01-02")
+
+const happyBasket = new Store();
+happyBasket.addProduct(lipTint);
+happyBasket.addProduct(brownieMix)
+happyBasket.addProduct(taco)
+happyBasket.addProduct()
+happyBasket.addProduct
+
