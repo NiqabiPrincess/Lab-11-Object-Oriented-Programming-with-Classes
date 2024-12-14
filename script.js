@@ -44,6 +44,8 @@ console.log(lipstick.toString());
 console.log(lipstick.getTotalValue());
 
 //* testing child class
+console.log("---------------------------------------------------");
+
 const milk = new PerishableProductProperties ("Milk", 1.51, 10, '2024-12-31');
 console.log(milk.toString());
 console.log(milk.getTotalValue());
@@ -51,3 +53,12 @@ console.log(milk.getTotalValue());
 const mushroom = new PerishableProductProperties ("Cremini Mushrooms", 3.72, 37, '2024-12-28');
 console.log(mushroom.toString());
 console.log(mushroom.getTotalValue());
+
+//* testing static method
+console.log("---------------------------------------------------");
+
+console.log("40% Discount")
+ProductProperties.applyDiscount([lipstick, milk, mushroom], 0.40);
+console.log(lipstick.toString());
+console.log(milk.toString());
+console.log(mushroom.toString());
