@@ -13,10 +13,14 @@ class ProductProperties {
     //method to state product attributes
     toString(){
         return (`Product: ${this.name} | Price: $${this.price.toFixed(2)} | Quantity: ${this.quantity}`);
-
-    //static method for applying discounts
-    applyDiscount()
     }
+    //static method for applying discounts
+    static applyDiscount(product, discount){
+        product.forEach(product => {
+            product.price -= product.price * discount;
+        });
+    }
+    
 }
 
 //* child class
