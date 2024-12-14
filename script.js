@@ -21,7 +21,7 @@ class ProductProperties {
 class PerishableProductProperties extends ProductProperties {
     //constructor adds another attribute
     constructor(name, price, quantity, expirationDate) {
-        super(name);
+        super(name, price, quantity);
         this.expirationDate = expirationDate;
     }
 
