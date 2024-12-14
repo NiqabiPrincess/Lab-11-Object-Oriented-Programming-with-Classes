@@ -7,7 +7,7 @@ class ProductProperties {
     }
     //method to return total value of product
     getTotalValue(){
-        return ("Total Value: " + this.quantity*this.price);
+        return ( this.name + " Total Value: $" + this.quantity*this.price);
     }
 
     //method to state product attributes
@@ -34,10 +34,13 @@ class PerishableProductProperties extends ProductProperties {
 //* testing parent class
 const lipstick = new ProductProperties ("Lipstick in Shade 'Rose Tea' ", 7.99, 20);
 console.log(lipstick.toString());
+console.log(lipstick.getTotalValue());
 
 //* testing child class
-const milk = new PerishableProductProperties ("Milk", 1.50, 10, '2024-12-31');
+const milk = new PerishableProductProperties ("Milk", 1.51, 10, '2024-12-31');
 console.log(milk.toString());
+console.log(milk.getTotalValue());
 
 const mushroom = new PerishableProductProperties ("Cremini Mushrooms", 3.72, 37, '2024-12-28');
 console.log(mushroom.toString());
+console.log(mushroom.getTotalValue());
