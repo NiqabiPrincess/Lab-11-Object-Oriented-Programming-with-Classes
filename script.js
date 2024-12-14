@@ -115,6 +115,7 @@ console.log(`Found Item: ${myMarket.findProductByName("Brownie Mix")}`); //case 
 console.log("---------------------------------------------------");
 console.log("....Testing System....");
 
+//* Creating New Products
 const lipTint = new ProductProperties ("Lip Tint", 6.56, 30);
 const brownieMix = new ProductProperties ("Brownie Mix", 3.52, 25);
 const taco = new ProductProperties ("Taco Diner Kit", 8.76, 15);
@@ -122,6 +123,7 @@ const taco = new ProductProperties ("Taco Diner Kit", 8.76, 15);
 const cheese = new PerishableProductProperties ("Cheese", 4.53, 27, "2025-01-05");
 const strawberry = new PerishableProductProperties ("Basket of Strawberries", 7.43, 22, "2025-01-02")
 
+//* Making Store Happy Basket and Adding new Products to its Inventory
 const happyBasket = new Store();
 happyBasket.addProduct(lipTint);
 happyBasket.addProduct(brownieMix)
@@ -129,7 +131,13 @@ happyBasket.addProduct(taco);
 happyBasket.addProduct(cheese);
 happyBasket.addProduct(strawberry);
 
+//* Seeing Happy Basket Inventory Value Before and After Sale
 console.log("Happy Basket Total Inventory Value Before Sale: $" + happyBasket.getInventoryValue());
 ProductProperties.applyDiscount(happyBasket.inventory, 0.15);
 console.log("Happy Basket Total Inventory Value During Sale: $" + happyBasket.getInventoryValue());
+
+//* Looking Up a Product From Happy Basket Inventory
+let item1 = happyBasket.findProductByName("Lip Tint");
+console.log(`...Finding Item...`);
+console.log(`Found Item: ${item1}`);
 
