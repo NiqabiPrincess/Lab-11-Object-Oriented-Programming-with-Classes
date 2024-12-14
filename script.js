@@ -57,6 +57,16 @@ class Store {
         }
         return totalValue.toFixed(2);
     }
+
+    // method for finding products in store inventory
+    findProductByName(name){
+        for (let i = 0; i < this.inventory.length; i++){
+            if (this.inventory[i].name === name){
+                return this.inventory[i];
+            }
+        }
+        return "Product Not Found in Store Inventory";
+    }
 }
 
 
