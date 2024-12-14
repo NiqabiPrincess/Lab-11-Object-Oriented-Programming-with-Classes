@@ -38,6 +38,20 @@ class PerishableProductProperties extends ProductProperties {
     }
 }
 
+//* Store Class
+class Store {
+    constructor(){
+        this.inventory = [];
+    }
+
+    // method to add product to inventory array
+    addProduct(product){
+        this.inventory.push(product);
+    }
+}
+
+
+
 //* testing parent class
 const lipstick = new ProductProperties ("Lipstick in Shade 'Rose Tea' ", 7.99, 20);
 console.log(lipstick.toString());
