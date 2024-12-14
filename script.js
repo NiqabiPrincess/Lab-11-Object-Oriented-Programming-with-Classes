@@ -1,3 +1,4 @@
+//* parent/super class
 class ProductProperties {
     constructor(name, price, quantity) {
         this.name = name;
@@ -13,6 +14,15 @@ class ProductProperties {
     toString(){
         return (`Product: ${this.name} | Price: $${this.price} | Quantity: ${this.quantity}`);
     }
+}
 
+//* child class
 
+class PerishableProductProperties extends ProductProperties {
+    constructor(name, price, quantity, expirationDate) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+        this.expirationDate = expirationDate;
+    }
 }
